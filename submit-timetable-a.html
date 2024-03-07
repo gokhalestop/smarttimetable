@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handle Set Text</title>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+          <li><a href="/timetables.html">Timetables</a></li>
+        
+        </ul>
+        
+      </nav>
+    <script>
+        function handleSetText() {
+            var inputResult = ""; // Clear previous input results
+            var numLectures = 5; // Assuming a fixed number of lectures
+            var maxTextLength = 100; // Assuming a maximum text length
+
+            for (var i = 0; i < numLectures; i++) {
+                var argName = "lecture_input" + (i + 1);
+                var lectureInput = document.getElementById(argName);
+                if (lectureInput) {
+                    var lectureText = lectureInput.value;
+                    var lectureInputs = new Array(numLectures);
+                    lectureInputs[i] = new Array(maxTextLength);
+                    var lectureTextCharArray = lectureText.substring(0, maxTextLength).split('');
+                    for (var j = 0; j < lectureTextCharArray.length; j++) {
+                        lectureInputs[i][j] = lectureTextCharArray[j];
+                    }
+                    inputResult += "Lecture " + (i + 1) + " set to: " + lectureText + "<br>";
+                } else {
+                    inputResult += "No text received for Lecture " + (i + 1) + "<br>";
+                }
+            }
+            document.getElementById("output").innerHTML = inputResult;
+        }
+    </script>
+
+    <!-- Assuming you have input fields for each lecture -->
+    <!-- For example: -->
+    <!-- <input type="text" id="lecture_input1"> -->
+    <!-- <input type="text" id="lecture_input2"> -->
+    <!-- ... -->
+
+    <button onclick="handleSetText()">Set Text</button>
+    <div id="output"></div>
+</body>
+</html>

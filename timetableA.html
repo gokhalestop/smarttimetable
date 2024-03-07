@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TE-A Timetable</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      h1 {
+        text-align: center;
+        color: #007bff;
+        margin-top: 50px;
+      }
+
+      .table {
+        display: block;
+        margin: 0 auto;
+      }
+
+      form {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 443px;
+        height: 501px;
+      }
+
+      .table {
+        display: block;
+        margin-left: 565px;
+      }
+
+      img {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        width: 443px;
+        height: 501px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+        <li><a href="/timetables.html">Timetables</a></li>
+      
+      </ul>
+      
+    </nav>
+    <h1>TE-A Timetable</h1>
+    <div class="table">
+      <form action="/submit-timetable-a" method="post">
+        <label for="lecture1">Lecture 1:</label>
+        <input type="text" id="lecture1" name="lecture1" /><br /><br />
+        <label for="lecture2">Lecture 2:</label>
+        <input type="text" id="lecture2" name="lecture2" /><br /><br />
+        <label for="lecture3">Lecture 3:</label>
+        <input type="text" id="lecture3" name="lecture3" /><br /><br />
+        <label for="lecture4">Lecture 4:</label>
+        <input type="text" id="lecture4" name="lecture4" /><br /><br />
+        <label for="lecture5">Lecture 5:</label>
+        <input type="text" id="lecture5" name="lecture5" /><br /><br />
+        <label for="lecture6">Lecture 6:</label>
+        <input type="text" id="lecture6" name="lecture6" /><br /><br />
+        <!-- Add more input fields for additional lectures if needed -->
+        <input type="submit" value="Submit" />
+      </form>
+      <img
+        src="https://gokhalestop.github.io/mini-project/ESP8266.jpg"
+        alt="ESP8266 Image"
+      />
+    </div>
+  </body>
+</html>
